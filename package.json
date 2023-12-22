@@ -1,0 +1,50 @@
+{
+  "name": "umm_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+ 
+    "umm-test": "cypress open --config-file cypress.config.js",
+    "lint": "eslint ./",
+    "lint:fix": "eslint ./ --fix",
+    "prepare": "cd .. && husky install"
+
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+
+  },
+  "lint-staged": {
+    "*.(js|jsx)": [
+      "npm run lint:fix"
+    ]
+  },
+  "dependencies": {
+    "@cypress/skip-test": "^2.6.1",
+    "cypress": "^13.6.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.7.0",
+    "junit-report-merger": "^6.0.3"
+  },
+  "devDependencies": {
+    "@cypress/eslint-plugin-dev": "^5.0.2",
+    "cypress-multi-reporters": "^1.6.4",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-chai-friendly": "^0.6.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^10.5.4",
+    "mocha": "^10.2.0",
+    "mocha-junit-reporter": "^2.2.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
