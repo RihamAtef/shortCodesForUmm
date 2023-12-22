@@ -25,8 +25,8 @@ module.exports = defineConfig({
       request_status: 'pending',
       short_message_single_part: '',
       short_message_single_part_MMS: '',
-     domain :"https://stag-mobileapi.uplandsoftware.com/",
-     shortcodes: "umm/api/v3/messages"
     },
+    domain :"https://stag-mobileapi.uplandsoftware.com/",
+    shortcodes: "umm/api/v3/messages"
   },
 });
