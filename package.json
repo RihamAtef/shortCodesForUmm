@@ -4,18 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
- 
     "umm-test": "cypress open --config-file cypress.config.js",
     "lint": "eslint ./",
     "lint:fix": "eslint ./ --fix",
     "prepare": "cd .. && husky install"
-
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
-
   },
   "lint-staged": {
     "*.(js|jsx)": [
@@ -27,7 +24,8 @@
     "cypress": "^13.6.1",
     "cypress-file-upload": "^5.0.8",
     "cypress-mochawesome-reporter": "^3.7.0",
-    "junit-report-merger": "^6.0.3"
+    "junit-report-merger": "^6.0.3",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@cypress/eslint-plugin-dev": "^5.0.2",
